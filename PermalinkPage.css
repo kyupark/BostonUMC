@@ -1,0 +1,69 @@
+#container {
+    width: 700px;
+}
+
+#header {
+    width: 700px;
+}
+
+#blog_info {
+    width: 513px;
+    margin: 0;
+}
+
+#blog_avatar {
+    width: 48px;
+    height: 48px;
+    backround-color: red;
+}
+
+#blog_avatar a {
+    position: absolute;
+    left: auto;
+    right: 0;
+}
+
+#blog_avatar:hover a {
+    left: auto;
+    right: -8px;
+}
+
+#sidebar {
+    display: none;
+}
+
+#blog_info {
+    {block:IfNotShowBlogTitle}
+        width: 632px;
+        margin-top: -7px;
+        float: right;
+    {/block:IfNotShowBlogTitle}
+}
+
+#blog_info .description {
+    margin-bottom: 60px;
+}
+
+.post .post_info,
+.post .post_info.floating,
+.post .caption {
+    width: auto !important;
+    float: none;
+}
+
+.post .post_info {
+    margin-top: 45px;
+}
+
+.post .post_info li,
+.post .post_info.floating li {
+    line-height: 14px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.post .post_info li a,
+.post .post_info.floating li a {
+    margin: 0 10px 0 0;
+    padding: 0 2px 0 5px;
+}
