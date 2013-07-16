@@ -1,653 +1,610 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} - {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/loose.dtd">
 
-        <meta charset="utf-8">
-        <meta name="description" content="{block:IndexPage}{block:Description}보스톤 다운타운에서 약 15분 떨어진 Medford에 위치한 U.M.C.(미국연합감리교회)에 소속된 20여년의 역사를 가진 교회입니다.{/block:Description}{/block:IndexPage}{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage}" />
+<html lang="en">
+<head>
 
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PostSummary} ({PostSummary}){/block:PostSummary}</title>
+    <meta name="description" content="{block:IndexPage}{block:Description}보스톤 다운타운에서 약 15분 떨어진 Medford에 위치한 U.M.C.(미국연합감리교회)에 소속된 20여년의 역사를 가진 교회입니다.{/block:Description}{/block:IndexPage}{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage}" />
+    <link rel="shortcut icon" href="{Favicon}" />
+    <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+    <link rel="stylesheet" href="http://static.tumblr.com/thpaaos/DIcklyl4z/reset.css" type="text/css" />
+    
+    <!-- ### Custom Stuff ### -->
+    <meta name="color:Title" content="#2CD7E6"/>
+    <meta name="color:Text" content="#666666"/>
+    <meta name="color:Links" content="#FF3B8E"/>
+    <meta name="color:Links Hover" content="#8AE837"/>
+    <meta name="color:Links In Notes" content="#947AD4"/>
+    <meta name="color:Links Background In Pagination" content="#FFFF00"/>
+    <meta name="color:Link Post" content="#FFC000"/>
+    <meta name="color:Timestamp" content="#FF0000"/>
+    
+    <meta name="font:Body" content="Helvetica Neue"/>
+    
+    <meta name="if:Show portrait bubble" content="1"/>
+    <meta name="if:Show notes on permalink pages" content="1"/>
+    <meta name="image:Header" content=""/>
 
-        <!-- HTML5 Shiv -->
-        <!--[if lt IE 9]>
-                <script src="http://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
-        <![endif]-->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        <!-- Reset CSS -->
-        <link rel="stylesheet" href="http://static.tumblr.com/thpaaos/DIcklyl4z/reset.css" type="text/css">
+        ga('create', 'UA-40628959-2', 'tumblr.com');
+        ga('send', 'pageview');
+    </script>
+    
+    <style type="text/css">
+        body {
+            color: {color:Text};
+            font-size: 11px;
+            font-family: {font:Body};
+            line-height: 15px;
+            background: #FFFFFF;
+        }
+        
+        a img { border-width: 0px; }
+        *:active, *:focus { outline: 0px; }
+        
+        a {
+            color: {color:Links};
+            text-decoration: none;
+        }
+        
+            a:hover { color: {color:Links Hover}; }
+        
+        ol, ul {
+            padding: 8px 0 0 15px;
+        }
 
-        <!-- Theme CSS -->
-        <link rel="stylesheet" href="https://rawgithub.com/kyupark/BostonUMC/master/style.css" type="text/css">
+        a.title {
+            color: #2F2F2F;
+            text-decoration: none;
+        }
 
+        h2 + a.timestamp {
+            line-height: 30px;
+        }
+
+        p {
+            margin: 0;
+            padding: 8px 0;
+        }
+
+            a.title + p { padding: 8px 0 8px 0; }
+
+            p + ul { padding: 0 0 8px 15px; }
+
+            p + blockquote { margin: 0 0 8px 0; }
+
+        blockquote {
+            border-left: 1px solid #EFEFEF;
+            margin: 8px 0;
+            padding: 0 0 0 15px;
+        }
+
+            blockquote > p:first-child {
+                padding: 0;
+            }
+
+        pre code {
+            font-family: 'Courier New', Courier, monospace;
+            background: #EFEFEF;
+        }
+        
+        strong { font-weight: bold; }
+        em { font-style: italic; }
+        
+        .caption {
+            padding: 8px 0;
+        }
+        
+            .caption a.readMore {
+                font-size: 10px;
+                text-transform: uppercase;
+            }
+        
+        #container {
+            width: 876px;
+            margin: 50px auto;
+            position: relative;
+        }
+                
+            #container .header {
+                width: 800px;
+                margin: 0 0 0 31px;
+            }
+
+                #container .header a h2 {
+                    color: {color:Title};
+                    font-size: 22px;
+                    font-family: Arial, sans-serif;
+                    line-height: 22px;
+                    text-decoration: none;
+                    margin: 0 0 15px 0;
+                    float: left;
+                }
+                
+                #container .header a img.logo {
+                    margin: 0 0 15px 0;
+                }
+                
+                form#search {
+                    width: 159px;
+                    position: absolute;
+                    top: -30px;
+                    right: 0px;
+                }
+
+                    form#search input.button {
+                        display: none;
+                    }
+
+                    form#search input.text {
+                        text-align: right;
+                        background: url(http://static.tumblr.com/thpaaos/3JQklzbvh/search.png) right no-repeat;
+                        border-width: 0px;
+                        margin: 0 0 12px 0;
+                        padding: 0 16px 0 0;
+                    }
+
+                #container .description {
+                    background: #f7f7f7;
+                    padding: 10px;
+                    clear: both;
+                    position: relative;
+                }
+
+                #container .description .portrait {
+                    width: 128px;
+                    height: 128px;
+                    background-image: url({PortraitURL-128});
+                    position: absolute;
+                    top: 0;
+                    left: -159px;
+                }
+                
+                    #container .description .portrait a.mask {
+                        width: 128px;
+                        height: 128px;
+                        background: url(http://static.tumblr.com/thpaaos/Z3Dkqe8l9/portrait-mask-128.png) top left no-repeat;
+                        display: block;
+                    }
+                    
+                #container .description .twitter {
+                    padding: 15px 0 0 0;
+                }
+                
+                    #container .description .twitter:first-child {
+                        padding: 0;
+                    }
+                
+            #container .posts {
+                width: 876px;
+                clear: both;
+            }
+            
+                #container .box {
+                    width: 225px;
+                    margin: 31px;
+                    float: left;
+                }
+                
+                #container .timestamp,
+                #container .tag {
+                    color: #666666;
+                    font-size: 10px;
+                    font-style: italic;
+                    font-family: Georgia;
+                    text-decoration: none;
+                    text-transform: lowercase;
+                }
+                
+                    a.tag span.pound {
+                        font-size: 12px;
+                    }
+                    
+                    a.tag:hover {
+                        color: {color:Timestamp} !important;
+                    }
+                
+                    #container .timestamp:hover,
+                    #container span.timestamp:hover .timestamp {
+                        color: #FFFFFF;
+                        background: {color:Timestamp};
+                    }
+                
+                #container .box img {
+                    max-width: 100%;
+                }
+                
+                #container .title {
+                    font-size: 14px;
+                    line-height: 18px;
+                    text-decoration: none;
+                    display: block;
+                }
+                
+                    #container a.title {
+                        color: #666666;
+                        text-decoration: none;
+                    }
+                    
+                        #container a.title.link { color: {color:Link Post}; }
+                        
+                    #container .audio {
+                        width: 207px;
+                        border: 1px solid #EFEFEF;
+                    }
+                    
+                    table.chat {
+                        width: 100%;
+                        margin: 0 0 10px 0;
+                        border-collapse: collapse;
+                    }
+
+                    h2 + table.chat {
+                        margin: 10px 0 3px 0 !important;
+                    }
+
+                    table.chat tr td {
+                        padding: 0 10px;
+                    }
+
+                    table.chat tr td.name {
+                        font-weight: bold;
+                        text-align: right;
+                        vertical-align: top;
+                    }
+
+                    table.chat tr td.line1 {
+                        background: #F7F7F7;
+                    }
+                    
+            #container .columnHolder {
+                width: 800px;
+                margin: 31px 0 0 31px;
+                overflow: hidden;
+            }
+            
+                #container .columnHolder.footer a {
+                    color: #666666;
+                }
+                    #container .columnHolder.footer a:hover { color: #444444; }
+            
+                #container .columnHolder .column {
+                    width: 225px;
+                    min-height: 1px;
+                    float: left;
+                }
+                    #container .columnHolder .column.middle { margin: 0 62px; }
+                    
+                #container .columnHolder .column.navigation {
+                    color: #D4D4D4;
+                }
+                    #container .columnHolder .column.navigation a {
+                        background: {color:Links Background In Pagination};
+                        padding: 1px 2px;
+                    }
+                        #container .columnHolder .column.navigation a:hover { color: #666666; }
+
+        #announce {
+            color: #444444;
+            font-size: 11px;
+            background: #ffff91;
+            padding: 10px 20px;
+            overflow: hidden;
+        }
+        
+            #announce .left { float: left; }
+            
+            #announce .right { float: right; }
+            
+                #announce .right a.close {
+                    color: #444444;
+                    font-weight: bold;
+                }
+            
+            #announce .left .search_query,
+            #announce .left .tag {
+                font-weight: bold;
+            }
+            
+        ul#twitter_update_list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            float: left;
+        }
+        
+            ul#twitter_update_list li {
+                float: left;
+            }
+                
         {block:PermalinkPage}
-            <!-- Simplified permalink pages (Hides right column) -->
-            <link rel="stylesheet" href="https://rawgithub.com/kyupark/BostonUMC/master/PermalinkPage.css" type="text/css">
-        {block:PermalinkPage}
+        .box { width: 800px !important; margin: 31px 0 0 31px;}
+    
+        p.answer_form_container { width: 512px; }
+        
+        ol.notes { width: 800px; list-style-type: none; margin: 31px 0 10px 0; padding: 0; }
+            ol.notes li.note { background: #F7F7F7; margin: 0 0 1px 0; padding: 0 4px; }
+            ol.notes a { color: {color:Links In Notes}; }
+            ol.notes img.avatar { display: none; }
+            ol.notes blockquote { margin: 0; }
+                ol.notes blockquote a { text-decoration: none; }
+                
+        #disqus_thread {
+            width: 365px;
+            font-size: 11px;
+            background: #f7f7f7;
+            margin: 31px auto 0 auto;
+            padding: 10px;
+            float: right;
+        }
 
-        <!-- Custom CSS -->
-        <style type="text/css" media="screen">
-            {CustomCSS}
-        </style>
+            #disqus_thread a { color: {color:Links In Notes}; }
 
-    </head>
-    <body>
-        <section id="container" class="group">            
-            <header id="header">
-                <section id="blog_info">
-                    {block:IfShowBlogTitle}<h1><a href="/">{Title}</a></h1>{/block:IfShowBlogTitle}
-                    {block:PermalinkPage}{block:IfShowBlogDescription}{block:Description}<div class="description cont">{Description}</div>{/block:Description}{/block:IfShowBlogDescription}{/block:PermalinkPage}
-                    {block:IfNotShowRightColumn}{block:IfShowBlogDescription}<div class="cont description"{block:PermalinkPage} style="display:none"{/block:PermalinkPage}>{Description}</div>{/block:IfShowBlogDescription}{/block:IfNotShowRightColumn}
-                </section>
+        {block:IfDisqusShortname}ol.notes { width: 385px; float: left; }{/block:IfDisqusShortname}
+        {/block:PermalinkPage}
+        
+        {block:SearchPage}
+        iframe#tumblr_controls { top: 39px !important; }
+        {/block:SearchPage}
+        {block:TagPage}
+        iframe#tumblr_controls { top: 39px !important; }
+        {/block:TagPage}
+             
+        {CustomCSS}
+         
+    {}
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script src="http://static.tumblr.com/thpaaos/Oznkoyc5z/jquery.scale.js"></script>
+    <script src="http://static.tumblr.com/thpaaos/lLwkowcqm/jquery.masonry.js"></script>
+    <script type="text/javascript">
+    {block:IndexPage}
+        $(window).load(function () {
+            $('.posts').masonry();
+        });
+    {/block:IndexPage}
+    </script>
+</head>
+<body>
+    {block:SearchPage}
+    <div id="announce">
+        <div class="left">
+            {block:SearchResults}
+                {lang:Found SearchResultCount results for SearchQuery 2}.
+            {/block:SearchResults}
+            
+            {block:NoSearchResults}
+                {lang:No posts containing SearchQuery 2}.
+            {/block:NoSearchResults}
+        </div>
+        <div class="right">
+            <a href="/" class="close">x</a>
+        </div>
+    </div> <!-- #announce -->
+    {/block:SearchPage}
 
-                {block:IfShowProfilePhoto}
-                    <section id="blog_avatar">
-                        <a href="/" class="avatar"><img src="{PortraitURL-64}"></a>
-                    </section>
-                {/block:IfShowProfilePhoto}
-            </header>
+    {block:TagPage}
+    <div id="announce">
+        <div class="left">
+            {lang:Showing posts tagged Tag 2}.
+        </div>
+        <div class="right">
+            <a href="/" class="close">x</a>
+        </div>
+    </div> <!-- .announce -->
+    {/block:TagPage}
+    
+    <div id="container">
+        <div class="header">
+            <a href="/">
+                {block:IfHeaderImage}<img src="{image:Header}" class="logo" />{/block:IfHeaderImage}
+                {block:IfNotHeaderImage}<h2>{Title}</h2>{/block:IfNotHeaderImage}
+            </a>
 
-            <aside id="sidebar">
-                {block:IfShowBlogDescription}{block:Description}<div class="cont description group">{Description}</div>{/block:Description}{/block:IfShowBlogDescription}
+            <div class="description">
+                {block:IfShowPortraitBubble}<div class="portrait"><a href="/" class="mask"></a></div>{/block:IfShowPortraitBubble}
 
+                <form id="search" action="/search" method="get">
+                    <input class="text" type="text" name="q" value="{SearchQuery}"/>
+                    <input class="button" type="submit" value="{lang:Search}"/>
+                </form>
+                
+                {block:AskEnabled}<a href="/ask">{AskLabel}</a>&nbsp;&nbsp;{/block:AskEnabled}
+                {block:SubmissionsEnabled}<a href="/submit">{SubmitLabel}</a>&nbsp;&nbsp;{/block:SubmissionsEnabled}
+                
                 {block:HasPages}
-                    <ul class="links">
-                        {block:Pages}
-                            <li><a href="{URL}">{Label}</a></li>
-                        {/block:Pages}
-                    </ul>
+                    {block:Pages}<a href="{URL}">{Label}</a>&nbsp;&nbsp;&nbsp;{/block:Pages}
+                    <br/><br/>
                 {/block:HasPages}
-
-                <ul class="links" style="display:none;{block:AskEnabled} display:block;{/block:AskEnabled}{block:SubmissionsEnabled} display:block;{/block:SubmissionsEnabled}">
-                    {block:AskEnabled}<li><a href="/ask" class="ask"><span class="icon"></span>ask me anything</a></li>{/block:AskEnabled}
-                    {block:SubmissionsEnabled}<li><a href="/submit" class="submit"><span class="icon"></span>submit a post</a></li>{/block:SubmissionsEnabled}
-                </ul>
-
-                <ul class="links">
-                    <li><a href="{RSS}" class="rss"><span class="icon"></span>rss</a></li>
-                    <li><a href="/archive" class="archive"><span class="icon"></span>archive</a></li>
-                </ul>
+                
+                {Description}
 
                 {block:Twitter}
-                    <aside id="twitter_container" style="display:none"></aside>
-
-                    <script type="text/javascript">
-                        function recent_tweets(data) {
-                            document.getElementById("twitter_container").innerHTML =
-                            document.getElementById("twitter_container").innerHTML +
-                            '<a class="bubble" href="http://twitter.com/{TwitterUsername}/status/' +
-                            (data[0].id_str ? data[0].id_str : data[0].id) +
-                            '">' + data[0].text +
-                            '<span class="arrow border"></span><span class="arrow fill"></span></a>' +
-                            '<a href="http://twitter.com/{TwitterUsername}" class="twitter_username">@{TwitterUsername}</a>';
-
-                            document.getElementById("twitter_container").style.display = 'block';
-                        }
-                    </script>
+                <br /><br />
+                <span style="float: left; margin: 0 7px 0 0"><a href="http://www.twitter.com/{TwitterUsername}">twitter.com/{TwitterUsername}</a>:</span> <ul id="twitter_update_list"></ul>
                 {/block:Twitter}
-            </aside>
 
-            <ul id="posts">
-                <!-- START POSTS -->
-                {block:Posts}
+                <form id="search" action="/search" method="get">
+                    <input class="text" type="text" name="q" value="{SearchQuery}"/>
+                    <input class="button" type="submit" value="Search"/>
+                </form>
 
-                        <li class="post group" {block:IfShowPostNotes} {block:PostNotes} style="padding:0"{/block:PostNotes} {/block:IfShowPostNotes}>  
+                {block:IfShowPortraitBubble}<div class="portrait"><a href="/" class="mask"></a></div>{/block:IfShowPortraitBubble}
 
-                        {block:Photo}
-                            <section class="top media" style="display:block;">
-                                 {LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"> {LinkCloseTag}{Question}
-                            </section>
-                        {/block:Photo}
+                <br style="clear:both">
+            </div>
+        </div>
+        
+        <div class="posts" id="allposts">
+            {block:Posts}
+            <div class="box">
+                {block:Photo}
+                {block:IndexPage}<a href="{Permalink}">{/block:IndexPage}
+                {block:PermalinkPage}{LinkOpenTag}{/block:PermalinkPage}
+                    <img src="{block:IndexPage}{PhotoURL-250}{/block:IndexPage}{block:PermalinkPage}{PhotoURL-HighRes}{/block:PermalinkPage}" alt="{PhotoAlt}">
+                {block:IndexPage}</a>{/block:IndexPage}
+                {block:PermalinkPage}{LinkCloseTag}{/block:PermalinkPage}
+                {/block:Photo}
+                
+                {block:Audio}
+                    
+                    {block:AudioEmbed}
+                        {AudioEmbed-250}
+                    {/block:AudioEmbed}
+                    
+                    {block:AudioPlayer}
+                        <div class="audio">{AudioPlayerWhite}</div>
+                    {/block:AudioPlayer}
+                    
+                {/block:Audio}
+                
+                {block:Video}
+                {block:IndexPage}{Video-250}{/block:IndexPage}
+                {block:PermalinkPage}{Video-500}{/block:PermalinkPage}
+                {/block:Video}
+                
+                {block:Text}
+                {block:Title}<a href="{Permalink}" class="title">{Title}</a>{/block:Title}
+                <div class="caption">
+                    {Body}
+                    {block:More}
+                        <a href="{Permalink}" class="readMore">{lang:Read more}</a>
+                    {/block:More}
+                </div>
+                {/block:Text}
+                
+                {block:Answer}
+                <b>{lang:Asker asked}:&nbsp;</b>{Question}
+                <p><br><b>{lang:Answer}:</b>{Answer}</p>
+                {/block:Answer}
+                
+                {block:Link}
+                <a href="{URL}" class="title link" {Target}>{Name} &rarr;</a>
+                {/block:Link}
+                
+                {block:Quote}
+                <div class="title">"{Quote}"</div>
+                {/block:Quote}
+                
+                {block:Chat}
+                {block:Title}<h2><a href="{Permalink}" class="title">{Title}</a></h2>{block:Title}
+                <table class="chat" cellspacing="0">
+                    {block:Lines}
+                    <tr>
+                        {block:Label}<td class="name line{UserNumber}">{Label}</td>{block:Label}<td class="words line{UserNumber}">{Line}</td>
+                    </tr>
+                    {/block:Lines}
+                </table>
+                {/block:Chat}
+                
+                {block:Photo}{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}{/block:Photo}
+                {block:Audio}{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}{/block:Audio}
+                {block:Video}{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}{/block:Video}
+                {block:Link}{block:Description}<div class="caption">{Description}</div>{/block:Description}{/block:Link}
+                {block:Quote}{block:Source}<div class="caption">{Source}</div>{/block:Source}{/block:Quote}
+                
+                <div><a href="{Permalink}" class="timestamp">&mdash;{block:Date} {lang:TimeAgo with NoteCount notes}</a></div>                
+                
+                {block:Date}
+                {block:IfDisqusShortname}
+                <span class="timestamp">&mdash; <a href="{Permalink}#disqus_thread" class="timestamp"></a></span><br>
+                {block:IfDisqusShortname}
+                {/block:Date}
+                
+                {block:Tags}
+                <a href="{TagURL}" class="tag"><span class="pound">#</span>{Tag}</a>&nbsp;
+                {/block:Tags}
+                
+                {block:PermalinkPage}
+                {block:IfDisqusShortname}
+                <div style="overflow: hidden">
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+                    <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+                {/block:Date}
+                {/block:IfDisqusShortname}
+                
+                {block:IfShowNotesOnPermalinkPages}
+                    {block:PostNotes}{PostNotes}{/block:PostNotes}
+                {/block:IfShowNotesOnPermalinkPages}
+                {block:IfDisqusShortname}</div>{/block:IfDisqusShortname}
+                
+                <div class="columnHolder footer" style="margin: 31px 0;">
+                    <div class="column navigation" id="navigation">
+                        {block:Pagination}
+                        {block:PreviousPage}<a href="{PreviousPage}" class="navigate">{/block:PreviousPage}{lang:Previous}{block:PreviousPage}</a>{/block:PreviousPage}
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        {block:NextPage}<a href="{NextPage}" class="navigate" id="nextPage">{/block:NextPage}{lang:Next} &rarr;{block:NextPage}</a>{/block:NextPage}
+                        {/block:Pagination}
 
-                        {block:Photoset}
-                            <section class="top media photoset">
-                                {Photoset-700}
-                            </section>
-                        {/block:Photoset}
+                        {block:PermalinkPagination}
+                        {block:NextPost}<a href="{NextPost}" class="navigate">{/block:NextPost}{lang:Previous}{block:NextPost}</a>{/block:NextPost}
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        {block:PreviousPost}<a href="{PreviousPost}" class="navigate">{/block:PreviousPost}{lang:Next} &rarr;{block:PreviousPost}</a>{/block:PreviousPost}
+                        {/block:PermalinkPagination}
+                    </div> <!-- .column.navigation -->
 
-                        {block:Link}
-                            <section class="top link_post">
-                                <a href="{URL}" class="link">{Name}<span class="arrow"></span></a>
-                            </section>
-                        {/block:Link}
+                    <div class="column middle">
+                        <a href="{RSS}">{lang:RSS}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="/archive">{lang:Archive}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="/random">{lang:Random}</a>
+                    </div> <!-- .column.middle -->
 
-                        {block:Audio}
-                            <section class="top audio">
-                            {AudioPlayerBlack}
-                            </section>
-                        {/block:Audio}
+                    <div class="column">
+                        <a href="http://www.tumblr.com/theme/3531">Astronaut</a> by <a href="http://petervidani.com">Peter Vidani</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="http://www.tumblr.com">Tumblr</a>
+                    </div> <!-- .column -->
+                </div> <!-- #footer -->
+                {/block:PermalinkPage}
+            </div> <!-- .box -->
+            {/block:Posts}
+        </div> <!-- .posts -->
+        
+        <div style="clear: both;"></div>
 
-                        {block:Video}
-                            <section class="top media">
-                                {Video-700}
-                            </section>
-                        {/block:Video}
-
-                        <section class="group caption_and_post_info
-                            {block:Photo} after_top_part isphoto{/block:Photo}
-                            {block:Photoset} after_top_part isphoto{/block:Photoset}
-                            {block:Link} after_top_part islink{/block:Link}
-                            {block:Audio} after_top_part isaudio{/block:Audio}
-                            {block:Video} after_top_part isvideo{/block:Video}
-                        ">
-                            {block:Text}
-                                <section class="caption group">
-                                    {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
-                                    <div class="cont group">{Body}</div>
-                                    {block:ContentSource}
-                                        <div class="cont content_source">
-                                            <a href="{SourceURL}">
-                                                {lang:Source}:
-                                                {block:SourceLogo}
-                                                    <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
-                                                {/block:SourceLogo}
-                                                {block:NoSourceLogo}
-                                                    {SourceTitle}
-                                                {/block:NoSourceLogo}
-                                            </a>
-                                        </div>
-                                    {/block:ContentSource}
-                                </section>
-                            {/block:Text}
-
-                            {block:Answer}
-                                <section class="caption group">
-                                    <div class="cont group">
-
-                                        <div class="question bubble">
-                                            {Question}
-                                            <span class="arrow border"></span>
-                                            <span class="arrow fill"></span>
-                                        </div>
-                                        <div class="asker group">
-                                            <img src="{AskerPortraitURL-24}" width="24" height="24" /> {Asker}
-                                        </div>
-                                        <div class="answer cont">{Answer}</div>
-                                    </div>
-                                    {block:ContentSource}
-                                        <div class="cont content_source">
-                                            <a href="{SourceURL}">
-                                                {lang:Source}:
-                                                {block:SourceLogo}
-                                                    <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
-                                                {/block:SourceLogo}
-                                                {block:NoSourceLogo}
-                                                    {SourceTitle}
-                                                {/block:NoSourceLogo}
-                                            </a>
-                                        </div>
-                                    {/block:ContentSource}
-                                </section>
-                            {/block:Answer}
-                            
-                            {block:Photo}
-                                <section class="caption group">
-                                    {block:Caption}
-                                        <div class="cont">{Caption}</div>
-                                    {/block:Caption}
-                                    {block:ContentSource}
-                                        <div class="cont content_source">
-                                            <a href="{SourceURL}">
-                                                {lang:Source}:
-                                                {block:SourceLogo}
-                                                    <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
-                                                {/block:SourceLogo}
-                                                {block:NoSourceLogo}
-                                                    {SourceTitle}
-                                                {/block:NoSourceLogo}
-                                            </a>
-                                        </div>
-                                    {/block:ContentSource}
-                                </section>
-                            {/block:Photo}
-
-                            {block:Photoset}
-                                <section class="caption group">
-                                    {block:Caption}
-                                        <div class="cont">{Caption}</div>
-                                    {/block:Caption}
-                                    {block:ContentSource}
-                                        <div class="cont content_source">
-                                            <a href="{SourceURL}">
-                                                {lang:Source}:
-                                                {block:SourceLogo}
-                                                    <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
-                                                {/block:SourceLogo}
-                                                {block:NoSourceLogo}
-                                                    {SourceTitle}
-                                                {/block:NoSourceLogo}
-                                            </a>
-                                        </div>
-                                    {/block:ContentSource}
-                                </section>
-                            {/block:Photoset}
-                            
-                            {block:Quote}
-                                    <section class="caption group">
-                                        <section class="quote {Length}_text {block:IfUseLargerFontForQuotes}larger_text{/block:IfUseLargerFontForQuotes}"><span>“</span>{Quote}”</section>
-                                        {block:Source}
-                                            <div class="cont quote_source">&mdash; {Source}</div>
-                                        {/block:Source}
-                                        {block:ContentSource}
-                                            <div class="cont content_source">
-                                                <a href="{SourceURL}">
-                                                    {lang:Source}:
-                                                    {block:SourceLogo}
-                                                        <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
-                                                    {/block:SourceLogo}
-                                                    {block:NoSourceLogo}
-                                                        {SourceTitle}
-                                                    {/block:NoSourceLogo}
-                                                </a>
-                                            </div>
-                                        {/block:ContentSource}
-                                    </section>
-                            {/block:Quote}
-                            
-                            {block:Link}
-                                {block:Description}
-                                    <section class="caption group">
-                                        <div class="cont">{Description}</div>
-                                        {block:ContentSource}
-                                            <div class="cont content_source">
-                                                <a href="{SourceURL}">
-                                                    {lang:Source}:
-                                                    {block:SourceLogo}
-                                                        <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
-                                                    {/block:SourceLogo}
-                                                    {block:NoSourceLogo}
-                                                        {SourceTitle}
-                                                    {/block:NoSourceLogo}
-                                                </a>
-                                            </div>
-                                        {/block:ContentSource}
-                                    </section>
-                                {/block:Description}
-                            {/block:Link}
-                            
-                            {block:Chat}
-                                <section class="caption group">
-                                    {block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
-                                    <ul class="conversation">
-                                        {block:Lines}
-                                            <li class="chat_line user{UserNumber}">
-                                                {block:Label}
-                                                    <strong>{Label}</strong>&nbsp;&nbsp;
-                                                {/block:Label}
-                                                {Line}
-                                            </li>
-                                        {/block:Lines}
-                                    </ul>
-                                    {block:ContentSource}
-                                        <div class="cont content_source">
-                                            <a href="{SourceURL}">
-                                                {lang:Source}:
-                                                {block:SourceLogo}
-                                                    <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
-                                                {/block:SourceLogo}
-                                                {block:NoSourceLogo}
-                                                    {SourceTitle}
-                                                {/block:NoSourceLogo}
-                                            </a>
-                                        </div>
-                                    {/block:ContentSource}
-                                </section>
-                            {/block:Chat}
-
-                            {block:Audio}
-                                {block:Caption}
-                                    <section class="caption group">
-                                        <div class="cont">{Caption}</div>
-                                        {block:ContentSource}
-                                            <div class="cont content_source">
-                                                <a href="{SourceURL}">
-                                                    {lang:Source}:
-                                                    {block:SourceLogo}
-                                                        <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
-                                                    {/block:SourceLogo}
-                                                    {block:NoSourceLogo}
-                                                        {SourceTitle}
-                                                    {/block:NoSourceLogo}
-                                                </a>
-                                            </div>
-                                        {/block:ContentSource}
-                                    </section>
-                                {/block:Caption}
-                            {/block:Audio}
-                            
-                            {block:Video}
-                                <section class="caption group">
-                                {block:Caption}
-                                    <div class="cont">{Caption}</div>
-                                {/block:Caption}
-                                {block:ContentSource}
-                                    <div class="cont content_source">
-                                        <a href="{SourceURL}">
-                                            {lang:Source}:
-                                            {block:SourceLogo}
-                                                <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
-                                            {/block:SourceLogo}
-                                            {block:NoSourceLogo}
-                                                {SourceTitle}
-                                            {/block:NoSourceLogo}
-                                        </a>
-                                    </div>
-                                {/block:ContentSource}
-                                </section>
-                            {/block:Video}
-
-                            <ul class="
-                                post_info
-                                {block:IfPlaceTimestampInLeftColumn}
-                                    {block:Text} floating{/block:Text}
-                                    {block:Answer} floating{/block:Answer}
-                                    {block:Photo}{block:Caption} floating{/block:Caption}{/block:Photo}
-                                    {block:Photo}{block:ContentSource} floating{/block:ContentSource}{/block:Photo}
-                                    {block:Photoset}{block:Caption} floating{/block:Caption}{/block:Photoset}
-                                    {block:Photoset}{block:ContentSource} floating{/block:ContentSource}{/block:Photoset}
-                                    {block:Quote} floating{/block:Quote}
-                                    {block:Link}{block:Description} floating{/block:Description}{/block:Link}
-                                    {block:Link}{block:ContentSource} floating{/block:ContentSource}{/block:Link}
-                                    {block:Chat} floating{/block:Chat}
-                                    {block:Audio}{block:Caption} floating{/block:Caption}{/block:Audio}
-                                    {block:Audio}{block:ContentSource} floating{/block:ContentSource}{/block:Audio}
-                                    {block:Video}{block:Caption} floating{/block:Caption}{/block:Video}
-                                    {block:Video}{block:ContentSource} floating{/block:ContentSource}{/block:Video}
-                                {/block:IfPlaceTimestampInLeftColumn}
-                            ">
-                                {block:Date} 
-                                <li>
-                                    <ul class="post_controls group">
-                                        <li>{ReblogButton size="21"}</li>
-                                        <li>{LikeButton size="21"}</li>
-                                    </ul>
-                                </li>
-                                {/block:Date} 
-                                <li><a href="{Permalink}" class="
-                                    timestamp
-                                    {block:Text}has_caption{block:Title} with_title{/block:Title}{/block:Text}
-                                    {block:Photo}{block:Caption}has_caption{/block:Caption}{/block:Photo}
-                                    {block:Photoset}{block:Caption}has_caption{/block:Caption}{/block:Photoset}
-                                    
-                                    {block:Quote}
-                                        {block:Source}
-                                            {Length}_quote
-                                        {/block:Source}
-                                    {/block:Quote}
-                                    
-                                    {block:Link}{block:Description}has_caption{/block:Description}{/block:Link}
-                                    {block:Chat}chat{block:Title} with_title{/block:Title}{/block:Chat}
-                                    {block:Audio}{block:Caption}has_caption{/block:Caption}{/block:Audio}
-                                    {block:Video}{block:Caption}has_caption{/block:Caption}{/block:Video}
-                                ">{block:IndexPage}{TimeAgo}{/block:IndexPage}{block:PermalinkPage}{block:Date}{Month} {DayOfMonth}, {Year} ({12Hour}:{Minutes} {AmPm}){/block:Date}{/block:PermalinkPage}</a></li>{block:PermalinkPage}{block:HasTags}{/block:HasTags}{/block:PermalinkPage}
-
-                                {block:IfShowPostNotes}
-                                    {block:NoteCount}
-                                       <li><a class="notecount" href="{Permalink}#notes">{NoteCount} notes</a></li>
-                                   {/block:NoteCount}
-                                {/block:IfShowPostNotes}
-
-                                {block:IfShowTags}
-                                    {block:Tags}
-                                        <li><a class="tag" href="{TagURL}"><span>#</span>{Tag}</a></li>
-                                    {/block:Tags}
-                                {/block:IfShowTags}
-                                </ul>
-                                {block:PostNotes}
-                                    <section class="post_notes">
-                                        <a name="notes">
-                                            {PostNotes}
-                                        </a>
-                                    </section>
-                                {/block:PostNotes}
-
-                                {block:IfDisqusShortname}{block:IndexPage}
-                                   <section class="caption group">
-                                        <a class="disquscomments" href="{Permalink}#disqus_thread">{NoteCount} Comments</a>
-                                    </section>
-                                {/block:IndexPage}{/block:IfDisqusShortname}
-                                {block:IfDisqusShortname}{block:Permalink}
-                                    <div id="disqus_thread"></div>
-                                    <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
-                                    <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
-                                {/block:Permalink}{/block:IfDisqusShortname}
-
-                                </section>
-                    </li>
-
-                {/block:Posts}
-                <!-- END POSTS -->
-            </ul>
-            
-            {block:IfDisqusShortname}
-                <script type="text/javascript">
-                //<![CDATA[
-                (function() {
-                    var links = document.getElementsByTagName('a');
-                    var query = '?';
-                    for(var i = 0; i < links.length; i++) {
-                        if(links[i].href.indexOf('#disqus_thread') >= 0) {
-                            query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-                        }
-                    }
-                    document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
-                })();
-                //]]>
-                </script>
-            {/block:IfDisqusShortname}
-
-            <footer id="footer">
-                {block:IfShowCopyrightInFooter}
-                    <section class="copyright">&copy; {CopyrightYears} {Title}</section>
-                {/block:IfShowCopyrightInFooter}
+        {block:IndexPage}
+        <div class="columnHolder footer">
+            <div class="column navigation" id="navigation">
                 {block:Pagination}
-                    <nav class="pagination">
-                        <section class="buttons">
-                            {block:PreviousPage}<a href="{PreviousPage}" class="left">{lang:Previous page}<span class="arrow"></span></a>{/block:PreviousPage}
-                            {block:NextPage}<a href="{NextPage}" class="right">{lang:Next page}<span class="arrow"></span></a>{block:NextPage}
-                        </section>
-                        <section class="disabled buttons">
-                            <li class="left"><span class="arrow"></span></li>
-                            <li class="right"><span class="arrow"></span></li>
-                        </section>
-                        <section class="count">Page  {CurrentPage} / {TotalPages}</section>
-                    </nav>
+                {block:PreviousPage}<a href="{PreviousPage}" class="navigate">{/block:PreviousPage}{lang:Previous}{block:PreviousPage}</a>{/block:PreviousPage}
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {block:NextPage}<a href="{NextPage}" class="navigate" id="nextPage">{/block:NextPage}{lang:Next} &rarr;{block:NextPage}</a>{/block:NextPage}
                 {/block:Pagination}
-            </footer>
-        </section>
-
-        {block:IfUseEndlessScrolling}
-        <script type="text/javascript" src="http://assets.tumblr.com/javascript/jquery-1.7.2.min.js"></script>
-        <script type="text/javascript">
-            var Tumblelog = {};
-
-            // AJAX
-            Tumblelog.Ajax = (function(url, callbackFunction) {
-                this.bindFunction = function (caller, object) {
-                    return function() {
-                        return caller.apply(object, [object]);
-                    };
-                };
-
-                this.stateChange = function (object) {
-                    if (this.request.readyState==4) this.callbackFunction(this.request.responseText);
-                };
-
-                this.getRequest = function() {
-                    if (window.ActiveXObject)
-                        return new ActiveXObject('Microsoft.XMLHTTP');
-                    else if (window.XMLHttpRequest)
-                        return new XMLHttpRequest();
-                    return false;
-                };
-
-                this.postBody = (arguments[2] || "");
-                this.callbackFunction=callbackFunction;
-                this.url=url;
-                this.request = this.getRequest();
-
-                if(this.request) {
-                    var req = this.request;
-                    req.onreadystatechange = this.bindFunction(this.stateChange, this);
-
-                    if (this.postBody!=="") {
-                        req.open("POST", url, true);
-                        req.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-                        req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-                        req.setRequestHeader('Connection', 'close');
-                    } else {
-                        req.open("GET", url, true);
-                    }
-
-                    req.send(this.postBody);
-                }
-            });
+                
+                {block:PermalinkPagination}
+                {block:NextPost}<a href="{NextPost}" class="navigate">{/block:NextPost}{lang:Previous}{block:NextPost}</a>{/block:NextPost}
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {block:PreviousPost}<a href="{PreviousPost}" class="navigate">{/block:PreviousPost}{lang:Next} &rarr;{block:PreviousPost}</a>{/block:PreviousPost}
+                {/block:PermalinkPagination}
+            </div> <!-- .column.navigation -->
             
-            // Infinite Scroll
-            Tumblelog.Infinite = (function() {
-
-                var _$window          = $(window);
-                var _$posts           = $('#posts');
-                var _trigger_post     = null;
-
-                var _current_page     = {CurrentPage};
-                var _total_pages      = {TotalPages};
-                var _url              = document.location.href.split("#")[0];
-                var _infinite_timeout = null;
-                var _is_loading       = false;
-                var _posts_loaded     = false;
-                
-                var _Ajax = Tumblelog.Ajax;
-
-                function init() {            
-                    set_trigger();
-                    enable_scroll();
-                }
-
-                function set_trigger () {
-                    var $all_posts = _$posts.find('li.post');
-                
-                    if (!_posts_loaded) {
-                        _posts_loaded = $all_posts.length;
-                    }
-
-                    if (_posts_loaded >= 4) {
-                        _trigger_post = _$posts.find('li.post:eq(' + ($all_posts.length - 4) + ')').get(0);
-                    } else if (_posts_loaded >= 3) {
-                        _trigger_post = _$posts.find('li.post:eq(' + ($all_posts.length - 3) + ')').get(0);
-                    } else {
-                        _trigger_post = _$posts.find('li.post:last').get(0);
-                    }
-                };
-
-                function in_viewport (el) {
-                    if (el == null) return;
-                    var top = el.offsetTop;
-                    var height = el.offsetHeight;
-
-                    while (el.offsetParent) {
-                        el = el.offsetParent;
-                        top += el.offsetTop;
-                    }
-
-                    return (top < (window.pageYOffset + window.innerHeight));
-                };
-
-                function enable_scroll() {
-                    $('#footer .pagination').hide();
-                    _$window.scroll(function(){
-                        clearTimeout(_infinite_timeout);
-                        infinite_timeout = setTimeout(infinite_scroll, 100);
-                    });
-                }
-
-                function disable_scroll() {
-                    clearTimeout(_infinite_timeout);
-                    $(window).unbind('scroll');
-                }
-
-                function infinite_scroll() {
-                    if (_is_loading) return;
-
-                    if (in_viewport(_trigger_post)) {
-                        load_more_posts(); // w00t
-                    }
-                };
-
-                function load_more_posts() {
-                    if (_is_loading) return;
-                    _is_loading = true;
-
-                    // Build URL
-                    if (_url.charAt(_url.length - 1) != '/') _url += '/';
-                    if (_current_page === 1) _url += 'page/1';
-                    _current_page++;
-                    _url = _url.replace('page/' + (_current_page - 1), 'page/' + _current_page);
-
-                    // Fetch
-                    _Ajax(_url, function(data) {
-                        var new_posts_html = data.split('<!-- START' + ' POSTS -->')[1].split('<!-- END' + ' POSTS -->')[0];
-                        var $new_posts = $('#posts', data);
-
-                        // Insert posts and update counters
-                        $('#posts').append(new_posts_html);
-                        _posts_loaded = $new_posts.find('li.post').length;
-
-                        if (_posts_loaded) {
-                            var post_ids = [];
-                            var like_buttons = $('#posts', data).find('.like_button');
-                            for (var i = 0; i < like_buttons.length; i++) {
-                                var button = like_buttons[i];
-                                if ($(button).attr('data-post-id')) {
-                                    post_ids.push($(button).attr('data-post-id'));
-                                }
-                            }
-                            if (post_ids.length > 0) Tumblr.LikeButton.get_status_by_post_ids(post_ids);
-                        }
-
-                        if ((_posts_loaded > 0) && (_current_page < _total_pages)) {
-                            set_trigger();
-                            _is_loading = false;
-
-                        } else {
-                            disable_scroll();
-                        }
-                    });
-
-                    // Stats
-                    {block:IfGoogleAnalyticsID}
-                        if (typeof window._gaq != 'undefined') {
-                            _gaq.push(['_trackPageview', _url]);
-                        }
-                    {/block:IfGoogleAnalyticsID}
-                }
-
-                return {
-                    init: init
-                };
-            });
-
-            $(function() {
-                {block:IndexPage}
-                if ( !($.browser.msie && (parseInt($.browser.version, 10) < 9) ) ) {
-                    var InfiniteScroll = new Tumblelog.Infinite;
-                    InfiniteScroll.init();
-                }
-                {/block:IndexPage}
-            });
-        </script>
-        {/block:IfUseEndlessScrolling}
-
-        {block:Twitter}
-            <script type="text/javascript" src="/tweets.js"></script>
-        {/block:Twitter}
-
-        {block:IfGoogleAnalyticsID}
-            <script type="text/javascript">
-                var _gaq=[['_setAccount','{text:Google Analytics ID}'],['_trackPageview']];
-                        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-                        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-                        s.parentNode.insertBefore(g,s)}(document,'script'));
-            </script>
-        {/block:IfGoogleAnalyticsID}
-    </body>
+            <div class="column middle">
+                <a href="{RSS}">{lang:RSS}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/archive">{lang:Archive}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/random">{lang:Random}</a>
+            </div> <!-- .column.middle -->
+            
+            <div class="column">
+                Design by <a href="http://kyupark.com">Kyu Park</a>
+            </div> <!-- .column -->
+        </div> <!-- #footer -->
+        {/block:IndexPage}
+    </div> <!-- #container -->
+    
+    {block:Twitter}
+        <script src="http://static.tumblr.com/thpaaos/ZCdkl306g/twitter.js" type="text/javascript"></script>
+        <script src="http://twitter.com/statuses/user_timeline/{TwitterUsername}.json?callback=twitterCallback2&count=1" type="text/javascript"></script>
+    {/block:Twitter}
+    
+    <script type="text/javascript">            
+        autoscale(new Array('object', 'embed'));
+    </script>
+</body>
 </html>
