@@ -3,10 +3,10 @@
 
 <html lang="en">
 <head>
-
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PostSummary} ({PostSummary}){/block:PostSummary}</title>
-    <meta name="description" content="{block:IndexPage}{block:Description}보스톤 다운타운에서 약 15분 떨어진 Medford에 위치한 U.M.C.(미국연합감리교회)에 소속된 20여년의 역사를 가진 교회입니다.{/block:Description}{/block:IndexPage}{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage}" />
+    <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} - {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
+    <meta name="description" content="{block:IndexPage}{block:Description}보스톤 다운타운에서 약 15분 떨어진 Medford에 위치한 미국연합감리교회(UMC)에 소속된 20여년의 역사를 가진 교회입니다.{/block:Description}{/block:IndexPage}{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage}" />
+    <meta name="keywords" content="{block:Permalink}{block:Posts}{block:Tags}{Tag}, {/block:Tags}{/block:Posts}{/block:Permalink}, 보스턴감리교회, 보스턴한인교회, 보스턴, 보스톤, 캠브리지, 케임브리지, 멀든, 에버릿, 에버렛, 메드포드, 소머빌, 서머빌, 알링턴, 알링톤, 리비어, 브루클라인, 브룩클라인, 메사추세츠, 메사추세츠주, 한인교회, 감리교회, UMC, korean church, boston, cambridge, malden, medford, somerville, arlington, revere, brookline, massachusetts" /> 
     <link rel="shortcut icon" href="{Favicon}" />
     <link rel="alternate" type="application/rss+xml" href="{RSS}" />
     <link rel="stylesheet" href="http://static.tumblr.com/thpaaos/DIcklyl4z/reset.css" type="text/css" />
@@ -21,7 +21,7 @@
     <meta name="color:Link Post" content="#FFC000"/>
     <meta name="color:Timestamp" content="#FF0000"/>
     
-    <meta name="font:Body" content="Helvetica Neue"/>
+    <meta name="font:Body" content="'Helvetica Neue', Helvetica, Arial"/>
     
     <meta name="if:Show portrait bubble" content="1"/>
     <meta name="if:Show notes on permalink pages" content="1"/>
@@ -410,11 +410,6 @@
 
             <div class="description">
                 {block:IfShowPortraitBubble}<div class="portrait"><a href="/" class="mask"></a></div>{/block:IfShowPortraitBubble}
-
-                <form id="search" action="/search" method="get">
-                    <input class="text" type="text" name="q" value="{SearchQuery}"/>
-                    <input class="button" type="submit" value="{lang:Search}"/>
-                </form>
                 
                 {block:AskEnabled}<a href="/ask">{AskLabel}</a>&nbsp;&nbsp;{/block:AskEnabled}
                 {block:SubmissionsEnabled}<a href="/submit">{SubmitLabel}</a>&nbsp;&nbsp;{/block:SubmissionsEnabled}
@@ -428,13 +423,8 @@
 
                 {block:Twitter}
                 <br /><br />
-                <span style="float: left; margin: 0 7px 0 0"><a href="http://www.twitter.com/{TwitterUsername}">twitter.com/{TwitterUsername}</a>:</span> <ul id="twitter_update_list"></ul>
+                <span style="float: left; margin: 0 7px 0 0"><a href="http://twitter.com/{TwitterUsername}">twitter.com/{TwitterUsername}</a></span> <ul id="twitter_update_list"></ul>
                 {/block:Twitter}
-
-                <form id="search" action="/search" method="get">
-                    <input class="text" type="text" name="q" value="{SearchQuery}"/>
-                    <input class="button" type="submit" value="Search"/>
-                </form>
 
                 {block:IfShowPortraitBubble}<div class="portrait"><a href="/" class="mask"></a></div>{/block:IfShowPortraitBubble}
 
@@ -534,21 +524,13 @@
                 {block:IfShowNotesOnPermalinkPages}
                     {block:PostNotes}{PostNotes}{/block:PostNotes}
                 {/block:IfShowNotesOnPermalinkPages}
-                {block:IfDisqusShortname}</div>{/block:IfDisqusShortname}
+                </div>
                 
                 <div class="columnHolder footer" style="margin: 31px 0;">
                     <div class="column navigation" id="navigation">
-                        {block:Pagination}
-                        {block:PreviousPage}<a href="{PreviousPage}" class="navigate">{/block:PreviousPage}{lang:Previous}{block:PreviousPage}</a>{/block:PreviousPage}
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        {block:NextPage}<a href="{NextPage}" class="navigate" id="nextPage">{/block:NextPage}{lang:Next} &rarr;{block:NextPage}</a>{/block:NextPage}
-                        {/block:Pagination}
-
-                        {block:PermalinkPagination}
-                        {block:NextPost}<a href="{NextPost}" class="navigate">{/block:NextPost}{lang:Previous}{block:NextPost}</a>{/block:NextPost}
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        {block:PreviousPost}<a href="{PreviousPost}" class="navigate">{/block:PreviousPost}{lang:Next} &rarr;{block:PreviousPost}</a>{/block:PreviousPost}
-                        {/block:PermalinkPagination}
+                        {block:IfShowCopyrightInFooter}
+                            <section class="copyright">&copy; {CopyrightYears} {Title}</section>
+                        {/block:IfShowCopyrightInFooter}
                     </div> <!-- .column.navigation -->
 
                     <div class="column middle">
@@ -558,8 +540,7 @@
                     </div> <!-- .column.middle -->
 
                     <div class="column">
-                        <a href="http://www.tumblr.com/theme/3531">Astronaut</a> by <a href="http://petervidani.com">Peter Vidani</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="http://www.tumblr.com">Tumblr</a>
+                        Design by <a href="http://kyupark.com">Kyu Park</a>
                     </div> <!-- .column -->
                 </div> <!-- #footer -->
                 {/block:PermalinkPage}
@@ -572,17 +553,9 @@
         {block:IndexPage}
         <div class="columnHolder footer">
             <div class="column navigation" id="navigation">
-                {block:Pagination}
-                {block:PreviousPage}<a href="{PreviousPage}" class="navigate">{/block:PreviousPage}{lang:Previous}{block:PreviousPage}</a>{/block:PreviousPage}
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                {block:NextPage}<a href="{NextPage}" class="navigate" id="nextPage">{/block:NextPage}{lang:Next} &rarr;{block:NextPage}</a>{/block:NextPage}
-                {/block:Pagination}
-                
-                {block:PermalinkPagination}
-                {block:NextPost}<a href="{NextPost}" class="navigate">{/block:NextPost}{lang:Previous}{block:NextPost}</a>{/block:NextPost}
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                {block:PreviousPost}<a href="{PreviousPost}" class="navigate">{/block:PreviousPost}{lang:Next} &rarr;{block:PreviousPost}</a>{/block:PreviousPost}
-                {/block:PermalinkPagination}
+                {block:IfShowCopyrightInFooter}
+                    <section class="copyright">&copy; {CopyrightYears} {Title}</section>
+                {/block:IfShowCopyrightInFooter}
             </div> <!-- .column.navigation -->
             
             <div class="column middle">
